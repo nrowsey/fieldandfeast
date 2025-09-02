@@ -212,3 +212,32 @@ h3{font-size:var(--fs-h3);color:var(--soft-white)}
   margin-left: auto;
   margin-right: auto;
 }
+/* NAV — full width, flush at bottom of hero, larger text */
+.site-header {
+  position: relative; /* anchor the nav to the header */
+}
+
+.site-header .site-nav {
+  background: var(--champagne-gold);
+  position: absolute;
+  bottom: 0;           /* sit flush at bottom of header */
+  left: 50%;
+  width: 100vw;        /* span viewport width */
+  transform: translateX(-50%);
+}
+
+.site-header .site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: clamp(2rem, 8vw, 6rem); /* wider spacing */
+  padding: 1.25rem var(--gutter); /* taller bar */
+  margin: 0 auto;
+  max-width: var(--container);
+}
+
+.site-header .site-nav a {
+  font-size: 1.25rem;   /* bigger font */
+  font-weight: 700;
+  color: var(--dark-charcoal);
+}
