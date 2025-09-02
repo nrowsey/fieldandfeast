@@ -212,3 +212,47 @@ h3{font-size:var(--fs-h3)}
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
+/* === UNIFY L/R EDGES ACROSS THE PAGE, ONE RAIL === */
+:root { --rail: var(--container); }         /* single content width */
+
+.container {                                 /* same rail everywhere */
+  max-width: var(--rail);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* About + Offerings + Gallery all use the same rail, and headings don't narrow */
+.section-header { max-width: none; }
+.about .section-header { max-width: none; }
+.gallery .section-header { max-width: none; }
+.gallery .gallery-intro { max-width: none; }
+
+/* Offerings: DO NOT stretch full width — align to the same rail */
+.offerings .container {
+  max-width: var(--rail) !important;  /* override earlier max-width:none */
+  width: 100% !important;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Gallery: make sure tiles + CTA align to the same edges */
+.grid-gallery,
+.gallery .center,
+.gallery .container::after {
+  max-width: 100%;        /* inherit the container’s rail */
+  margin-inline: 0;       /* no extra centering wrappers */
+}
+
+/* === SINGLE BACKGROUND COLOR FOR THE WHOLE PAGE === */
+html, body { background: var(--soft-white); }
+.about, .offerings, .gallery { background: var(--soft-white); }
+
+/* === CARD SHADOWS BACK ON (a touch stronger so they read) === */
+.card {
+  box-shadow: 0 8px 24px rgba(31, 42, 68, 0.12);   /* visible, soft */
+}
+
+/* (Optional) tighten card corners & spacing to match mock vibe */
+.cards { gap: 1rem; }
+.card { border-radius: 18px; }
