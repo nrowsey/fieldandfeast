@@ -241,3 +241,10 @@ h3{font-size:var(--fs-h3);color:var(--soft-white)}
   font-weight: 700;
   color: var(--dark-charcoal);
 }
+
+.site-header .header-inner {
+  padding-bottom: 4rem; /* make space for tagline above the nav */
+}
+.site-header .site-nav ul {
+  gap: clamp(3rem, 10vw, 8rem); /* bigger horizontal spacing */
+}
