@@ -79,11 +79,10 @@ html,body{
 /* Gold NAV: full-bleed, no overlap, centered content */
 .site-header .site-nav{
   position:relative;               /* keep in normal flow so it doesn't cover tagline */
-  left:50%;
-  transform:translateX(-50%);
-  width:100vw;                     /* edge-to-edge */
+  left:0;
+  transform:none;
+  width:100%;                     /* edge-to-edge */
   background:var(--champagne-gold);
-  border-top:4px solid rgba(0,0,0,.15); /* subtle top edge like mock */
 }
 .site-header .site-nav .nav-inner{max-width:var(--container);margin:0 auto}
 .site-header .site-nav ul{
@@ -129,7 +128,7 @@ h3{font-size:var(--fs-h3)}
   border:1px solid rgba(0,0,0,.06)
 }
 .cards .card:last-child{background:var(--olive-green-dark);border-color:rgba(0,0,0,.08)}
-.card .note{font-style:italic}
+.card .note{font-style:normal}
 
 /* GALLERY */
 .gallery{background:var(--soft-white)}
