@@ -1,0 +1,175 @@
+/* CSS BY Natalia Rowsey */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS REST */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, picture { display: block; max-width: 100%; height: auto; }
+ul, ol { margin: 0; padding-left: 1.25rem; }
+h1, h2, h3, h4, p { margin: 0 0 1rem 0; }
+a { color: inherit; text-decoration: none; }
+
+/* ROOT VARIABLES */
+:root{
+  --midnight-blue: #1F2A44;
+  --olive-green: #76885B;
+  --champagne-gold: #E5C185;
+  --linen: #F8F4EC;
+  --dark-charcoal: #2B2B2B;
+  --soft-white: #FAF9F6;
+
+  --bg: var(--linen);
+  --text: var(--dark-charcoal);
+  --muted: #666;
+
+  --radius: 16px;
+  --shadow: 0 6px 24px rgba(0,0,0,0.08);
+
+  --container: min(1100px, 92vw);
+  --gutter: clamp(1rem, 2.2vw, 1.5rem);
+
+  --fs-hero: clamp(2.25rem, 5.2vw, 4rem);
+  --fs-h2: clamp(1.6rem, 2.3vw, 2.125rem);
+  --fs-h3: clamp(1.125rem, 1.7vw, 1.375rem);
+  --fs-lede: clamp(1.0625rem, 1.4vw, 1.2rem);
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Playfair Display", serif;
+  line-height: 1.45;
+  font-size: 16px;
+}
+.container { width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+
+.skip-link{ position:absolute; left:-9999px; }
+.skip-link:focus{ position:static; padding:0.5rem 0.75rem; background:var(--champagne-gold); color:var(--midnight-blue); }
+
+/* HERO HEADER */
+.site-header{
+  background: var(--midnight-blue);
+  color: var(--soft-white);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 0;
+}
+.header-inner{
+  display:flex; flex-direction:column; align-items:center; gap:0.75rem;
+  text-align:center;
+}
+.brand{ display:flex; flex-direction:column; align-items:center; gap:0.75rem; }
+.brand img{ width:110px; height:auto; }
+.brand-name{ font-weight:800; font-size: var(--fs-hero); letter-spacing:0.2px; }
+.brand-tagline{ font-style: italic; opacity: 0.85; }
+
+/* GOLD NAV BAR (separate stripe under hero) */
+.site-nav{ background: var(--champagne-gold); }
+.site-nav ul{
+  list-style:none; display:flex; justify-content:center; gap: clamp(1rem, 6vw, 6rem);
+  padding: 0.75rem 0;
+}
+.site-nav a{ color: var(--dark-charcoal); font-weight: 700; }
+.site-nav a:hover{ text-decoration: underline; }
+
+/* SECTIONS */
+.section{ padding-block: clamp(2rem, 6vw, 4rem); }
+.section-header{ max-width: 70ch; }
+h1{ color: var(--midnight-blue); line-height:1.15; }
+h2{ font-size: var(--fs-h2); color: var(--midnight-blue); line-height:1.2; margin-bottom:0.75rem; }
+h3{ font-size: var(--fs-h3); color: var(--soft-white); }
+.lede{ font-size: var(--fs-lede); }
+
+/* thin gold rule under section intros (matches mockups) */
+.section-header::after{
+  content:""; display:block; width:120px; height:3px;
+  background: var(--champagne-gold);
+  margin-top: 0.75rem;
+}
+
+.about{ background: var(--soft-white); }
+.offerings{ background: var(--bg); }
+.gallery{ background: var(--soft-white); }
+
+/* OFFERINGS CARDS */
+.cards{ display:grid; gap:1rem; margin-top:1rem; }
+.card{
+  background: var(--olive-green); color: var(--soft-white);
+  border-radius: var(--radius); padding:1rem; box-shadow: var(--shadow);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.card p{ color: var(--soft-white); opacity: 0.98; }
+.card .note{ font-style: italic; opacity: 0.95; }
+.ticks{ margin-top:0.5rem; }
+.ticks li{ margin-bottom:0.5rem; }
+
+/* Make the "Monthly Basket" look a touch richer and (at md/lg) span full width */
+.cards .card:last-child{
+  background: color-mix(in oklab, var(--olive-green) 88%, black);
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* GALLERY */
+.gallery-intro{ max-width: 70ch; margin-bottom: 1rem; }
+.grid-gallery{
+  display:grid; gap: 0.75rem; grid-template-columns: 1fr;
+}
+.tile{
+  background:#ffffff; border-radius: var(--radius); overflow: clip;
+  box-shadow: var(--shadow); border:1px solid rgba(0,0,0,0.06);
+}
+.tile figcaption{
+  padding:0.75rem 0.9rem; font-size:0.98rem; color: var(--midnight-blue);
+  font-style: italic;
+}
+
+/* CTA BUTTON */
+.center{ text-align:center; }
+.btn{
+  display:inline-block; padding:0.7rem 1.1rem; border-radius:999px;
+  background: var(--olive-green); color: var(--soft-white);
+  border:1px solid var(--olive-green); font-weight:700;
+}
+.btn:hover{ background: transparent; color: var(--olive-green); }
+
+/* FOOTER */
+.site-footer{
+  background: var(--midnight-blue); color: var(--soft-white);
+  padding-block: 2rem 1rem; margin-top: 1rem;
+}
+.footer-grid{ display:grid; gap:1rem; }
+.address a{ color: var(--champagne-gold); }
+.social ul{ list-style:none; display:flex; gap:0.75rem; padding:0; }
+.social a{ color: var(--champagne-gold); }
+.social a:hover{ text-decoration:underline; }
+.copyright{ text-align:center; margin-top:1rem; color:#e8ebff; font-size:0.95rem; }
+
+/* MEDIA QUERY (medium) */
+@media screen and (min-width: 600px){
+  .cards{ grid-template-columns: 1fr 1fr; }
+  /* monthly basket spans full width at md per mockup */
+  .cards .card:last-child{ grid-column: 1 / -1; }
+
+  .grid-gallery{ grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid{ grid-template-columns: 2fr 1fr; align-items:start; }
+
+  /* make body text slightly narrower like mockup */
+  .section-header{ max-width: 75ch; }
+}
+
+/* MEDIA QUERY (large) */
+@media screen and (min-width: 900px){
+  /* Keep monthly basket full width at large to match your large mockup */
+  .cards{ grid-template-columns: 1fr 1fr; }
+  .cards .card:last-child{ grid-column: 1 / -1; }
+
+  .grid-gallery{ grid-template-columns: repeat(3, 1fr); }
+}
+
+/* MEDIA QUERY (xl) */
+@media screen and (min-width: 1200px){
+  .grid-gallery{ grid-template-columns: repeat(4, 1fr); }
+}
