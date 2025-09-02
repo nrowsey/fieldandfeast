@@ -110,7 +110,7 @@ h3{font-size:var(--fs-h3)}
 /* short gold rule */
 .section-header::after{
   content:"";display:block;width:120px;height:3px;
-  background:var(--champagne-gold);margin-top:.75rem;
+  background:var(--champagne-gold);
 }
 
 /* ABOUT */
@@ -130,11 +130,6 @@ h3{font-size:var(--fs-h3)}
 }
 .cards .card:last-child{background:var(--olive-green-dark);border-color:rgba(0,0,0,.08)}
 .card .note{font-style:italic}
-
-/* custom tick bullets (matches your HTML .ticks) */
-.ticks{list-style:none;padding-left:0}
-.ticks li{position:relative;padding-left:1.5rem;margin-bottom:.5rem}
-.ticks li::before{content:"✓";position:absolute;left:0;color:var(--soft-white);font-weight:700}
 
 /* GALLERY */
 .gallery{background:var(--soft-white)}
