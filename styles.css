@@ -172,3 +172,11 @@ h3{font-size:var(--fs-h3)}
 @media (min-width:1200px){
   .grid-gallery{grid-template-columns:repeat(5,1fr)}
 }
+
+/* Evenly distribute items across the full width */
+.site-header .site-nav ul{
+  justify-content: space-evenly;  /* or space-between */
+  gap: 0;                         /* let flex do the spacing */
+}
+/* (optional) bigger click targets */
+.site-header .site-nav a{ padding: .2rem .8rem; }
