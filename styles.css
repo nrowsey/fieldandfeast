@@ -188,3 +188,71 @@ h3{font-size:var(--fs-h3);color:var(--soft-white)}
   background:var(--champagne-gold);
   margin-top:1.25rem;
 }
+/* === FINAL FIX PATCH (append at end of styles.css) === */
+
+/* 1) Hero header: midnight blue, stacked + centered */
+.site-header{
+  background: var(--midnight-blue) !important;
+  color: var(--soft-white) !important;
+  text-align: center !important;
+}
+.site-header .header-inner{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .75rem !important;
+}
+
+/* 2) Gold nav: full-bleed bar centered across the page */
+.site-header .site-nav{
+  display: block !important;
+  background: var(--champagne-gold) !important;
+  position: relative !important;
+  left: 50% !important;
+  width: 100vw !important;          /* span viewport */
+  transform: translateX(-50%) !important; /* center the strip */
+}
+.site-header .site-nav ul{
+  list-style: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: clamp(1rem, 6vw, 6rem) !important;
+  padding: .9rem var(--gutter) !important;
+  margin: 0 auto !important;
+  max-width: var(--container) !important;
+}
+.site-header .site-nav a{
+  color: var(--dark-charcoal) !important;
+  font-weight: 700 !important;
+}
+
+/* 3) Footer: midnight blue and fully centered layout */
+.site-footer{
+  background: var(--midnight-blue) !important;
+  color: var(--soft-white) !important;
+  text-align: center !important;
+}
+.site-footer .footer-grid{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  justify-items: center !important;
+  gap: 1rem !important;
+}
+.site-footer .address{ text-align: center !important; }
+.site-footer .social{ margin-top: 1rem !important; }
+.site-footer .social ul{ justify-content: center !important; }
+
+/* 4) Section dividers: gold rules under Offerings and Gallery */
+.offerings .container::after,
+.gallery .container::after{
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: var(--champagne-gold) !important;
+  margin-top: 1.25rem !important;
+}
+
+/* 5) Offerings background: same as page (no different color) */
+.offerings{ background: var(--bg) !important; }
