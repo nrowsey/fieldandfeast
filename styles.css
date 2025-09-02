@@ -197,3 +197,18 @@ h3{font-size:var(--fs-h3);color:var(--soft-white)}
   content:"";display:block;width:100%;height:2px;
   background:var(--champagne-gold);margin-top:1.25rem;
 }
+/* Align tiles + button to the same left/right edges as the text */
+.gallery-align { max-width: var(--container); margin-inline: auto; }
+
+/* Ensure the grid itself stretches to those edges */
+.grid-gallery { width: 100%; max-width: var(--container); margin-inline: auto; }
+
+/* Make the CTA bar align as well */
+.center .btn { max-width: var(--container); }
+
+/* Align the gold divider to those exact edges */
+.gallery .container::after {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+}
