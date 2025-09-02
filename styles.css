@@ -130,6 +130,11 @@ h3{font-size:var(--fs-h3)}
 .cards .card:last-child{background:var(--olive-green-dark);border-color:rgba(0,0,0,.08)}
 .card .note{font-style:normal}
 
+.offerings .card .note {
+  font-style: normal;   /* was italic somewhere earlier */
+}
+
+
 /* GALLERY */
 .gallery{background:var(--soft-white)}
 .gallery .section-header{max-width:none}
@@ -255,3 +260,23 @@ html, body { background: var(--soft-white); }
 /* (Optional) tighten card corners & spacing to match mock vibe */
 .cards { gap: 1rem; }
 .card { border-radius: 18px; }
+
+/* Offerings: use normal bullets (no class needed) */
+.offerings .card > ul{
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1.25rem;   /* indent so bullets don’t hug the edge */
+  margin: .75rem 0 0;
+}
+.offerings .card > ul li{
+  margin: .35rem 0;
+}
+
+/* If any labels are still wrapped in <strong>, normalize them */
+.offerings .card > ul strong{ font-weight: 400; }
+
+/* Bottom blurb should NOT be italic */
+.offerings .card .note{ font-style: normal; }
+
+/* Safety: kill any leftover custom tick pseudo-elements, if present */
+.offerings .card ul li::before{ content: none !important; }
