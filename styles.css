@@ -193,3 +193,27 @@ h3{font-size:var(--fs-h3)}
 .gallery .container::after{
   content:"";display:block;width:100%;height:2px;background:var(--champagne-gold);margin-top:1.25rem
 }
+/* === PATCH: tagline + nav === */
+.site-header .site-nav{
+  position: relative;        /* was absolute; stop overlapping the tagline */
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;              /* keep full-bleed gold bar */
+  background: var(--champagne-gold);
+  border-top: 4px solid rgba(0,0,0,.15);
+  z-index: 1;
+}
+
+/* breathing room so the stack feels right */
+.header-inner{
+  padding-block: 2.75rem 2rem;
+}
+
+/* === PATCH: offerings should align with the rest of the content === */
+.offerings .container{
+  max-width: var(--container);   /* undo max-width:none */
+  width: var(--container);       /* undo width:100% */
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
