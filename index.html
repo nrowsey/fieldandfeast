@@ -10,33 +10,28 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#" aria-label="Field & Feast home">
-      <img src="fieldandfeast-logo.png" alt="Field &amp; Feast logo" width="132" height="48" />
-      <h1 class="brand-name">Field &amp; Feast</h1>
-      <p class="brand-tagline">Harvested with Care, Served with Elegance</p>
-    </a>
-  </div>
-
-  <!-- nav OUTSIDE the container so the gold bar can go full-bleed -->
-  <nav class="site-nav" aria-label="Primary">
-    <div class="nav-inner">
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#offerings">Offerings</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Field & Feast home">
+        <div class="logo-placeholder">🌾</div>
+        <h1 class="brand-name">Field &amp; Feast</h1>
+        <p class="brand-tagline">Harvested with Care, Served with Elegance</p>
+      </a>
     </div>
-  </nav>
-</header>
 
-
+    <nav class="site-nav" aria-label="Primary">
+      <div class="nav-inner">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#offerings">Offerings</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <main id="main">
-    <!-- ======================================= -->
-    <!-- About -->
-    <!-- ======================================= -->
+    <!-- ABOUT -->
     <section id="about" class="section about" aria-labelledby="about-title">
       <div class="container">
         <header class="section-header">
@@ -51,9 +46,7 @@
       </div>
     </section>
 
-    <!-- ======================================= -->
-    <!-- Offerings -->
-    <!-- ======================================= -->
+    <!-- OFFERINGS -->
     <section id="offerings" class="section offerings" aria-labelledby="offerings-title">
       <div class="container">
         <h2 id="offerings-title">Our Offerings</h2>
@@ -83,77 +76,52 @@
       </div>
     </section>
 
-<!-- ======================================= -->
-<!-- Gallery -->
-<!-- ======================================= -->
-<section id="gallery" class="section gallery" aria-labelledby="gallery-title">
-  <div class="container">
-    <header class="section-header">
-      <h2 id="gallery-title">A Gallery of Field &amp; Feast</h2>
-      <p class="gallery-intro">
-        Experience the elegance and artistry behind Field &amp; Feast through our curated collection of images.
-        From lush fields and handcrafted ingredients to beautifully plated farm-to-table creations,
-        each photo tells the story of our commitment to excellence.
-      </p>
-    </header>
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="gallery-title">A Gallery of Field &amp; Feast</h2>
+          <p class="gallery-intro">
+            Experience the elegance and artistry behind Field &amp; Feast through our curated collection of images.
+            From lush fields and handcrafted ingredients to beautifully plated farm-to-table creations,
+            each photo tells the story of our commitment to excellence.
+          </p>
+        </header>
 
-    <!-- align block ensures tiles + button share the same max-width edges -->
-    <div class="gallery-align">
-      <div class="grid-gallery">
-        <figure class="tile">
-          <picture>
-            <source srcset="tomatoes-200w.jpg 200w, tomatoes-300w.jpg 300w, tomatoes-600w.jpg 600w"
-                    sizes="(min-width:1200px) 20vw, (min-width:900px) 30vw, (min-width:600px) 45vw, 100vw">
-            <img src="tomatoes-300w.jpg" alt="Heirloom tomatoes at peak ripeness." loading="lazy">
-          </picture>
-          <figcaption>Heirloom tomatoes at peak ripeness.</figcaption>
-        </figure>
+        <div class="gallery-align">
+          <div class="grid-gallery">
+            <figure class="tile">
+              <img src="tomatoes-300w.jpg" alt="Heirloom tomatoes at peak ripeness." loading="lazy">
+              <figcaption>Heirloom tomatoes at peak ripeness.</figcaption>
+            </figure>
 
-        <figure class="tile">
-          <picture>
-            <source srcset="olive-oil-200w.jpg 200w, olive-oil-300w.jpg 300w, olive-oil-600w.jpg 600w"
-                    sizes="(min-width:1200px) 20vw, (min-width:900px) 30vw, (min-width:600px) 45vw, 100vw">
-            <img src="olive-oil-300w.jpg" alt="Drizzling golden olive oil over fresh harvest." loading="lazy">
-          </picture>
-          <figcaption>Drizzling golden olive oil over fresh harvest.</figcaption>
-        </figure>
+            <figure class="tile">
+              <img src="olive-oil-300w.jpg" alt="Drizzling golden olive oil over fresh harvest." loading="lazy">
+              <figcaption>Drizzling golden olive oil over fresh harvest.</figcaption>
+            </figure>
 
-        <figure class="tile">
-          <picture>
-            <source srcset="table-setting-200w.jpg 200w, table-setting-300w.jpg 300w, table-setting-600w.jpg 600w"
-                    sizes="(min-width:1200px) 20vw, (min-width:900px) 30vw, (min-width:600px) 45vw, 100vw">
-            <img src="table-setting-300w.jpg" alt="Elegant tablescape under the evening sky." loading="lazy">
-          </picture>
-          <figcaption>Elegant tablescape under the evening sky.</figcaption>
-        </figure>
+            <figure class="tile">
+              <img src="table-setting-300w.jpg" alt="Elegant tablescape under the evening sky." loading="lazy">
+              <figcaption>Elegant tablescape under the evening sky.</figcaption>
+            </figure>
 
-        <figure class="tile">
-          <picture>
-            <source srcset="chef-plating-200w.jpg 200w, chef-plating-300w.jpg 300w, chef-plating-600w.jpg 600w"
-                    sizes="(min-width:1200px) 20vw, (min-width:900px) 30vw, (min-width:600px) 45vw, 100vw">
-            <img src="chef-plating-300w.jpg" alt="Artful plating with seasonal ingredients." loading="lazy">
-          </picture>
-          <figcaption>Artful plating with seasonal ingredients.</figcaption>
-        </figure>
+            <figure class="tile">
+              <img src="chef-plating-300w.jpg" alt="Artful plating with seasonal ingredients." loading="lazy">
+              <figcaption>Artful plating with seasonal ingredients.</figcaption>
+            </figure>
 
-        <figure class="tile">
-          <picture>
-            <source srcset="basket-200w.jpg 200w, basket-300w.jpg 300w, basket-600w.jpg 600w"
-                    sizes="(min-width:1200px) 20vw, (min-width:900px) 30vw, (min-width:600px) 45vw, 100vw">
-            <img src="basket-300w.jpg" alt="Our monthly basket, curated with care." loading="lazy">
-          </picture>
-          <figcaption>Our monthly basket, curated with care.</figcaption>
-        </figure>
+            <figure class="tile">
+              <img src="basket-300w.jpg" alt="Our monthly basket, curated with care." loading="lazy">
+              <figcaption>Our monthly basket, curated with care.</figcaption>
+            </figure>
+          </div>
+
+          <p class="center">
+            <a class="btn" href="#" aria-label="View our full gallery">View Our Full Gallery</a>
+          </p>
+        </div>
       </div>
-
-      <p class="center">
-        <a class="btn" href="#" aria-label="View our full gallery">View Our Full Gallery</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -174,5 +142,10 @@
     </div>
     <p class="copyright">&copy; <span id="year"></span> Field &amp; Feast. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
