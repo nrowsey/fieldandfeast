@@ -58,23 +58,23 @@ html,body{
   background:var(--midnight-blue);
   color:var(--soft-white);
   text-align:center;
-  overflow:hidden; /* clips any fractional seams */
+  overflow:hidden;
 }
 .header-inner{
   display:flex;flex-direction:column;align-items:center;gap:.7rem;
-  padding-block:2.6rem 2rem; /* room for tagline before nav */
+  padding-block:2.6rem 2rem;
 }
 .brand{display:flex;flex-direction:column;align-items:center;gap:.7rem}
 .brand img{width:110px;height:auto}
 .brand-name{font-weight:800;font-size:var(--fs-hero);letter-spacing:.2px;line-height:1.1;margin:0}
 .brand-tagline{font-style:italic;opacity:.9;margin:.05rem 0 0}
 
-/* Gold NAV: full width, no “lip”, centered links */
+/* NAV */
 .site-header .site-nav{
   position:relative;
   width:100%;
   background:var(--champagne-gold);
-  box-shadow:inset 0 2px rgba(0,0,0,.15); /* top line like mock, no layout seam */
+  box-shadow:inset 0 2px rgba(0,0,0,.15); 
 }
 .site-header .site-nav .nav-inner{max-width:var(--container);margin:0 auto}
 .site-header .site-nav ul{
@@ -87,12 +87,12 @@ html,body{
    SECTIONS
    ======================= */
 .section{padding-block:clamp(2rem,6vw,4rem)}
-.section-header{max-width:none}       /* keep headings on the same rail */
+.section-header{max-width:none}       
 h1{color:var(--midnight-blue);line-height:1.15}
 h2{font-size:var(--fs-h2);color:var(--midnight-blue);line-height:1.2;margin-bottom:.75rem}
 h3{font-size:var(--fs-h3)}
 
-/* Gold divider under each section's intro where needed */
+/* Gold divider */
 .about .container::after,
 .offerings .container::after,
 .gallery .container::after{
@@ -101,7 +101,7 @@ h3{font-size:var(--fs-h3)}
 
 /* ABOUT */
 .about{background:var(--soft-white)}
-.about .lede{font-size:inherit} /* keep intro same size as paragraph */
+.about .lede{font-size:inherit} 
 
 /* OFFERINGS */
 .offerings{background:var(--soft-white)}
@@ -114,11 +114,9 @@ h3{font-size:var(--fs-h3)}
   border:1px solid rgba(0,0,0,.06);
 }
 .cards .card:last-child{background:var(--olive-green-dark);border-color:rgba(0,0,0,.08)}
-/* bullets (no custom ticks) */
 .offerings .card > ul{list-style:disc;list-style-position:outside;padding-left:1.25rem;margin:.75rem 0 0}
 .offerings .card > ul li{margin:.35rem 0}
-.offerings .card > ul strong{font-weight:400}  /* neutralize any leftover <strong> */
-/* bottom blurb NOT italic */
+.offerings .card > ul strong{font-weight:400}  
 .offerings .card .note{font-style:normal}
 
 /* GALLERY */
@@ -173,10 +171,9 @@ h3{font-size:var(--fs-h3)}
   .grid-gallery{grid-template-columns:repeat(5,1fr)}
 }
 
-/* Evenly distribute items across the full width */
 .site-header .site-nav ul{
-  justify-content: space-evenly;  /* or space-between */
-  gap: 0;                         /* let flex do the spacing */
+  justify-content: space-evenly;  
+  gap: 0;                         
 }
-/* (optional) bigger click targets */
+
 .site-header .site-nav a{ padding: .2rem .8rem; }
